@@ -7,6 +7,7 @@ const userSchema = new Schema({
     LastName:{type:String,require:true,lowercase:true},
     email:{type:String, require:true},
     password:{type:String,require:true},
+    isTeacher:{type:Boolean,default:false},
     profilePhoto:{type:Array,default:[]},
     activity:[{type:Schema.Types.ObjectId, ref:"Activity"}]
 

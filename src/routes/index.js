@@ -11,6 +11,12 @@ const {deletEvent} = require("./Evento/deletEvent")
 const {getActivity} = require("./Activity/getActivity")
 const {postActivity} = require("./Activity/postActivity");
 const {putActivity} = require("./Activity/putActivity")
+//---------------------------------------------------//
+
+//importacion de rutas de usuario
+const {postUser} = require("./Users/postUser")
+const {getUser} = require("./Users/getUsers")
+const {logInUser} = require("./Users/logInUser")
 
 const router= Router();
 
@@ -24,4 +30,13 @@ router.get("/activity",getActivity)
 router.get("/activity/:activityName",getActivity)
 router.post("/activity",postActivity)
 router.put("/activity/:_id",putActivity)
+//---------------------------------------------------//
+router.get("/user",getUser)
+router.post("/user",postUser)
+router.get("/login",logInUser)
+
+
+
 module.exports = router
+
+
