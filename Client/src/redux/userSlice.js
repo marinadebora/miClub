@@ -1,28 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-   name:'',
-   userName:'',
-   email: ''
-
+   user:[],
 }
 export const userSlice = createSlice({
   name:'user',
   initialState,
-  reducer:{
-    addUser: (state,action)=>{
-      const {name, userName, email} = action.payload
-      state.name = name
-      state.userName = userName
-      state.email = email
-    },
-    changeEmail:(state,action)=>{
-      state.email = action.payload
-    }
+  reducers:{
+    setUser: function(state,action){
+      state.user = action.payload.user
+    } 
   }
 })
-export const { addUser, changeEmail } = userSlice.actions
+
+export const { setUser, changeEmail } = userSlice.actions
+
 export default userSlice.reducer
+
+
+
+
 
 /* import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
