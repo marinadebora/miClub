@@ -5,8 +5,9 @@ const findOrCreate = require('mongoose-findorcreate')
 const eventSchema = new Schema({
     name: { type: String, require: true, lowercase: true },
     image: String,
-    description: { type: String, requiere: true },
+    description: { type: String },
     date: { type: String, require: true },
+    hour:{type: String, require: true},
     user: [{ type: Schema.Types.ObjectId, ref: 'User' }]
 }, {
     timestamps: false,

@@ -9,8 +9,10 @@ const userSchema = new Schema({
     password: { type: String, require: true },
     isTeacher: { type: Boolean, default: false },
     profilePhoto: { type: Array, default: [] },
+    favorites:{type: Array,defaukt:[]},
     activity: [{ type: Schema.Types.ObjectId, ref: "Activity" }],
-    event: [{ type: Schema.Types.ObjectId, ref: 'Event' }]
+    event: [{ type: Schema.Types.ObjectId, ref: 'Event' }],
+    profile:[{type:Schema.Types.ObjectId, ref:'Profile'}]
 }, {
     timestamps: false,
     versionKey: false //para que no aprezca el __v

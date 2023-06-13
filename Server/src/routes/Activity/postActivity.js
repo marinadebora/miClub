@@ -6,17 +6,17 @@ const postActivity = async (req, res) => {
     const { activityName, daysAndSchedule, institution, phone, address,_id} = req.body;
 
     try {
-        let buscar = await User.findById(_id)
-        console.log(buscar)
-        if(buscar){
-            const create = await Activity.create({ activityName, daysAndSchedule, institution, phone, address,user:buscar._id })
-            const modificar = await User.findOneAndUpdate({_id},{
+        let lookFor = await User.findById(_id)
+
+        if(lookFor){
+            const create = await Activity.create({ activityName, daysAndSchedule, institution, phone, address,user:lookFor._id })
+            const activity = await User.findOneAndUpdate({_id},{
                 Activity:[],
                 $push:{
                     activity: create
                 }
             })
-            res.send('activity created successfully').json(create)
+            res.send('Activity created successfully').json(create)
         }else{
             res.status(404).send("user not found")
         }

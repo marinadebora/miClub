@@ -2,7 +2,7 @@ const Event = require('../../models/Event')
 
 const putEvent = async (req, res) =>
 {
-  const { name, image, description, date } = req.body
+  const { name, image, description, date,hour } = req.body
   const { _id } = req.params;
   try {
     const event = await Event.findById({ _id })
@@ -10,7 +10,7 @@ const putEvent = async (req, res) =>
     if (!event) {
       res.status(404).send('event not found')
     } else {
-      await Event.updateOne({ _id }, { name: name ? name : event.name, image: image ? image : event.image, description: description ? description : event.description, date: date ? date : event.date })
+      await Event.updateOne({ _id }, { name: name ? name : event.name, image: image ? image : event.image, description: description ? description : event.description, date: date ? date : event.date,hour:hour?hour:event.hour })
       res.send('activity edited successfully')
     }
   } catch (error) {
