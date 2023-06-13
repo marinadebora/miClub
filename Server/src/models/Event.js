@@ -6,7 +6,8 @@ const eventSchema = new Schema({
     name: { type: String, require: true, lowercase: true },
     image: String,
     description: { type: String, requiere: true },
-    date: { type: String, require: true }
+    date: { type: String, require: true },
+    user: [{ type: Schema.Types.ObjectId, ref: 'User' }]
 }, {
     timestamps: false,
     versionKey: false //para que no aprezca el __v

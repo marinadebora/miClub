@@ -7,8 +7,8 @@ const activitySchema = new Schema({
     institution: { type: String, require: true, lowercase: true },
     phone: { type: Array },
     address: { type: String, require: true },
-    user: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-    event: [{ type: Schema.Types.ObjectId, ref: 'Event' }]
+    user: [{ type: Schema.Types.ObjectId, ref: 'User' }]
+  
 }, {
     timestamps: false,
     versionKey: false //para que no aprezca el __v

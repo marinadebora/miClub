@@ -2,11 +2,11 @@ const Activity = require('../../models/Activity')
 
 
 const getActivity = async (req, res) => {
-  const { activityName } = req.params;
+  const { _id } = req.params;
   try {
     let name;
-    if (activityName) {
-      name = await Activity.find({ activityName })
+    if (_id) {
+      name = await Activity.findById(_id)
     } else {
       name = await Activity.find()
     }

@@ -27,7 +27,7 @@ router.put('/event/:_id', putEvent)
 router.delete('/event/:_id', deletEvent)
 // ---------------------------------------------------//
 router.get('/activity', getActivity)
-router.get('/activity/:activityName', getActivity)
+router.get('/activity/:_id', getActivity)
 router.post('/activity', postActivity)
 router.put('/activity/:_id', putActivity)
 // ---------------------------------------------------//
