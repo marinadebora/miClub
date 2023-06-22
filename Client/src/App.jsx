@@ -1,6 +1,6 @@
 //import { useDispatch } from 'react-redux'
 import './App.css'
-import User from './components/User'
+import Home from './components/Home/Home'
 //import { useEffect } from 'react'
 
 function App() {
@@ -10,7 +10,7 @@ useEffect(() => {
 }, [input]) */
   return (
     <>
-   <User />
+   <Home />
     </>
   )
 }

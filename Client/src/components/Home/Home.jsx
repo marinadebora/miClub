@@ -1,4 +1,35 @@
-import { useEffect } from 'react';
+import HeaderHome from "./HeaderHome"
+
+const Home = () => {
+  return (
+    <HeaderHome />
+  )
+}
+
+export default Home
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 // pagina https://jasonwatmore.com/post/2022/06/16/react-redux-toolkit-fetch-data-in-async-action-with-createasyncthunk
 import { userActions } from '_store';
@@ -33,3 +64,4 @@ function Home() {
         </div>
     );
 }
+ */

@@ -5,15 +5,15 @@ import {setUser} from './userSlice'
 
 export const getUsers =()=>{
   return async(dispatch)=>{
-    const response =await serverApi('/user')
-    dispatch(setUser({user:response.data}))
+    const response =(await serverApi('/user')).data
+    dispatch(setUser(response))
   }
 }
 
-export const getProfileId = (_id)=>{
+export const getProfileId = (id)=>{
   return async(dispatch)=>{
-    const response = await serverApi(`/profile/${_id}`)
-    console.log(response)
-    dispatch(setProfile({profile:response.data}))    
+    const response = (await serverApi(`/profile/${id}`)).data
+    /* console.log(response) */
+    dispatch(setProfile(response))    
   }
 }
