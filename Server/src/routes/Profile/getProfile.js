@@ -1,10 +1,10 @@
 const Profile = require("../../models/Profile")
 
 const getProfile = async(req,res)=>{
-  const { _id } = req.params
+  const { id } = req.params
 try {
-  if(_id){
-    const lookFor = await Profile.findById(_id)
+  if(id){
+    const lookFor = await Profile.findById(id)
     let profile = lookFor ? lookFor : "Profile not found"
     res.json(profile)
   }else{

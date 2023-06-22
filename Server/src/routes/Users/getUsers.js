@@ -1,10 +1,10 @@
 const User = require('../../models/User')
 
 const getUser = async (req, res) => {
-  const { _id } = req.params
+  const { id } = req.params
   try {
-    if(_id){
-      const userId = await User.findById(_id)
+    if(id){
+      const userId = await User.findById(id)
       let response = userId ? userId : "user not found"
       res.json(response)
     }else{
