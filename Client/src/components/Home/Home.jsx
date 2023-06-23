@@ -1,8 +1,22 @@
-import HeaderHome from "./HeaderHome"
+import { Image, Stack } from "react-bootstrap"
 
 const Home = () => {
   return (
-    <HeaderHome />
+   /*  <Stack gap={3}>
+      <div className="p-2">First item</div>
+      <div className="p-2">Second item</div>
+      <div className="p-2">Third item</div>
+    </Stack> */
+    <div>
+        <Stack gap={2} className="col-md-10 mx-auto">
+            <div className="p-2">
+            <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
+            </div>
+            <div className="p-2">contenido de la pagina</div>
+        </Stack>
+    
+    </div>
+  
   )
 }
 

@@ -1,16 +1,17 @@
-//import { useDispatch } from 'react-redux'
-import './App.css'
-import Home from './components/Home/Home'
-//import { useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home/Home.jsx'
+import NavBarHome from './components/Home/NavBarHome.jsx'
+import User from './components/User.jsx'
+function App()
+{
 
-function App() {
-/* const dispatch = useDispatch()
-useEffect(() => {
-
-}, [input]) */
   return (
     <>
-   <Home />
+      <NavBarHome />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/user' element={<User />} />
+      </Routes>
     </>
   )
 }

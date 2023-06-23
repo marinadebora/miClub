@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getProfileId, getUsers } from "../redux/thunks"
+import { Image } from "react-bootstrap"
 
 const User = () =>
 {
@@ -17,10 +18,10 @@ const User = () =>
   }, [dispatch, id])
 
   return (
-    <div>
-      <img src={img?.imageLogo} alt="" /><img src={img?.imageFontPage} alt="" />
-      <h1>hola</h1>
-    </div>
+    <>
+      <Image src={img?.imageLogo} width={171} height={180} roundedCircle />
+      <Image src={img?.imageFontPage} fluid />
+    </>
   )
 }
 
