@@ -3,13 +3,13 @@ const User = require('../../models/User');
 
 
 const postActivity = async (req, res) => {
-    const { activityName, daysAndSchedule, institution, phone, address,_id} = req.body;
+    const { activityName,category, daysAndSchedule, institution, phone, address,city,_id} = req.body;
 
     try {
         let lookFor = await User.findById(_id)
 
         if(lookFor){
-            const create = await Activity.create({ activityName, daysAndSchedule, institution, phone, address,user:lookFor._id })
+            const create = await Activity.create({ activityName,category, daysAndSchedule, institution, phone, address,city,user:lookFor._id })
             const activity = await User.findOneAndUpdate({_id},{
                 Activity:[],
                 $push:{

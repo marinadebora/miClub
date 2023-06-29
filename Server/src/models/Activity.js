@@ -3,10 +3,12 @@ const findOrCreate = require('mongoose-findorcreate')
 
 const activitySchema = new Schema({
     activityName: { type: String, require: true, lowercase: true },
+    category:{ type: String, require: true},
     daysAndSchedule: { type: Array, require: true },
     institution: { type: String, require: true, lowercase: true },
     phone: { type: Array },
     address: { type: String, require: true },
+    city:{type: String, require: true},
     user: [{ type: Schema.Types.ObjectId, ref: 'User' }]
   
 }, {
