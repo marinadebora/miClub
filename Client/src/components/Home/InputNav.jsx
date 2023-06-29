@@ -2,7 +2,7 @@ import { Form } from "react-bootstrap"
 
 const InputNav = () => {
   return (
-    <Form.Control size="sm" type="text" placeholder="Small text" />
+    <Form.Control size="m" type="text" placeholder="Small text" />
     
   )
 }

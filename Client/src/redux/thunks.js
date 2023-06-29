@@ -1,6 +1,7 @@
-import { setProfile } from './profileSlice'
+import { setProfile } from '../Slice/profileSlice'
 import { serverApi } from './serverApi'
-import {setUser} from './userSlice'
+import {setUser} from '../Slice/userSlice'
+import { setActivity } from '../Slice/acticitySlice'
 
 
 export const getUsers =()=>{
@@ -15,5 +16,11 @@ export const getProfileId = (id)=>{
     const response = (await serverApi(`/profile/${id}`)).data
     /* console.log(response) */
     dispatch(setProfile(response))    
+  }
+}
+export const getActivity = ()=>{
+  return async(dispatch)=>{
+    const response = (await serverApi(`/activity`)).data
+    dispatch(setActivity(response))    
   }
 }

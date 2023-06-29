@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from './userSlice'
-import profileSlice from './profileSlice'
+import userSlice from '../Slice/userSlice'
+import profileSlice from '../Slice/profileSlice'
+import activitySlice from '../Slice/acticitySlice'
 
 export const store= configureStore({
   reducer:{
-    user:userReducer,
-    profile:profileSlice
+    user:userSlice,
+    profile:profileSlice,
+    activity:activitySlice
   }
 })
 /* import { configureStore } from '@reduxjs/toolkit';

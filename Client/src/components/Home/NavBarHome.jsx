@@ -1,15 +1,21 @@
-import{ Nav, NavLink, Navbar,/* ,Nav,NavDropdown */ NavbarBrand} from 'react-bootstrap'
+import{ Container, Image, Nav, NavLink, Navbar,/* ,Nav,NavDropdown */ NavbarBrand} from 'react-bootstrap'
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
-import { ImHome2 } from "react-icons/im";
-
+import InputNav from './InputNav'
 //<div  className="col-md-10 mx-auto">
 const NavBarHome = () =>
-{
+{//https://res.cloudinary.com/deqbqghhq/image/upload/v1687785603/classcenterlogo_waymt1.png
   return (
     <Navbar collapseOnSelect expand='lg' variant='dark' bg='dark'>
-      
-      <NavbarBrand><ImHome2 /></NavbarBrand>
+        <Container  className="col-md-10 mx-auto ">
+      <NavbarBrand >
+        <NavLink href='/'>
+        <Image src='https://res.cloudinary.com/deqbqghhq/image/upload/v1687785603/classcenterlogo_waymt1.png'rounded width={150} height={30} />
+        </NavLink>
+      </NavbarBrand>
+      <Container className='col-md-3'>
+      <InputNav />
+      </Container>
       <NavbarToggle aria-controls='responsive-navbar-nav' />
       <NavbarCollapse id='responsive-nabvar-nav'>
         <Nav className='me-auto'>
@@ -23,7 +29,7 @@ const NavBarHome = () =>
         </Nav>
 
       </NavbarCollapse>
-   
+      </Container>
     </Navbar>
   )
 }

@@ -1,21 +1,47 @@
-import { Image, Stack } from "react-bootstrap"
 
+import { Image, NavLink, Stack } from "react-bootstrap"
+
+
+
+// useLocation para capturara el pathname 
 const Home = () => {
+
   return (
-   /*  <Stack gap={3}>
-      <div className="p-2">First item</div>
-      <div className="p-2">Second item</div>
-      <div className="p-2">Third item</div>
-    </Stack> */
+ 
     <div>
-        <Stack gap={2} className="col-md-10 mx-auto">
+      <Stack gap={2} className="col-md-5 mx-auto ">
+              <NavLink href="/sport">
             <div className="p-2">
             <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
             </div>
-            <div className="p-2">contenido de la pagina</div>
-        </Stack>
-    
-    </div>
+            </NavLink>
+            <div className="p-2">Deporte</div>
+        </Stack> 
+        <Stack gap={2} className="col-md-5 mx-auto">
+        <NavLink href="/education">
+            <div className="p-2">
+            <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
+            </div>
+        </NavLink>
+            <div className="p-2">Educacion</div>
+        </Stack> 
+        <Stack gap={2} className="col-md-5 mx-auto">
+        <NavLink href="/jobs">
+            <div className="p-2">
+            <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
+            </div>
+            </NavLink>
+            <div className="p-2">Oficio</div>
+        </Stack> 
+        <Stack gap={2} className="col-md-5 mx-auto">
+        <NavLink href="/others">
+            <div className="p-2">
+            <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
+            </div>
+            </NavLink>
+            <div className="p-2">Otros</div>
+        </Stack> 
+       </div>
   
   )
 }
@@ -23,7 +49,33 @@ const Home = () => {
 export default Home
 
 
+/* import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
+function GridExample() {
+  return (
+    <Row xs={1} md={2} className="g-4">
+      {Array.from({ length: 4 }).map((_, idx) => (
+        <Col key={idx}>
+          <Card>
+            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Body>
+              <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
+  );
+}
+
+export default GridExample; */
 
 
 
