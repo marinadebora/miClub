@@ -19,7 +19,7 @@ const NavBarHome = () =>
       <NavbarToggle aria-controls='responsive-navbar-nav' />
       <NavbarCollapse id='responsive-nabvar-nav'>
         <Nav className='me-auto'>
-          <NavLink href='/user'>User</NavLink>
+          <NavLink href='/perfil'>Perfil</NavLink>
           <NavLink href='/activity'>Activity</NavLink>
         </Nav>
         <Nav>

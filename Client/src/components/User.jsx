@@ -16,7 +16,7 @@ const User = () =>
     dispatch(getUsers())
     dispatch(getProfileId(id))
   }, [dispatch, id])
-
+console.log(users)
   return (
     <>
       <Image src={img?.imageLogo} width={171} height={180} roundedCircle />

@@ -8,7 +8,7 @@ const userSchema = new Schema({
     email: { type: String, require: true },
     password: { type: String, require: true },
     isTeacher: { type: Boolean, default: false },
-    profilePhoto: { type: Array, default: [] },
+    profilePhoto: { type:  Array, default: ["https://res.cloudinary.com/deqbqghhq/image/upload/v1688125751/profiledefautl_malkwa.png"] },
     favorites:{type: Array,defaukt:[]},
     activity: [{ type: Schema.Types.ObjectId, ref: "Activity" }],
     event: [{ type: Schema.Types.ObjectId, ref: 'Event' }],
