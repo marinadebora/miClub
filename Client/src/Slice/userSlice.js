@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
    user:[],
+   userCreate:[]
 }
 export const userSlice = createSlice({
   name:'user',
@@ -9,7 +10,11 @@ export const userSlice = createSlice({
   reducers:{
     setUser: (state,action)=>{
       state.user = action.payload
-    } 
+    },
+   /*  createUser: (state,action)=>{
+        state.userCreate = action.payload
+        console.log(action.payload)
+    } */
   }
 })
 
@@ -81,3 +86,5 @@ function createExtraReducers() {
         };
     }
 } */
+
+

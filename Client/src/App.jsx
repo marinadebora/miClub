@@ -7,6 +7,7 @@ import Others from './components/views/others.jsx'
 import Education from './components/views/Education.jsx'
 import Sports from './components/views/Sports.jsx'
 import ProfileUser from './components/profileUser.jsx/ProfileUser.jsx'
+import LogIn from './components/Home/LogIn.jsx'
 function App()
 {
 
@@ -20,6 +21,7 @@ function App()
         <Route exact path='/education' element={<Education />} />
         <Route exact path='/jobs' element={<Jobs />} />
         <Route exact path='/others' element={<Others />} />
+        <Route exact path='/logIn' element={<LogIn />} />
       </Routes>
       <FooterHome />
     </>

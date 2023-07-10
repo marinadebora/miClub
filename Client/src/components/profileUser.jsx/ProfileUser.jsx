@@ -10,7 +10,7 @@ let user = users.user[0]
   {
     dispatch(getUsers())
   }, [dispatch])
-console.log(user)
+
   return (
     <div>
       <Image src={user.profilePhoto[0]} width={171} height={180} roundedCircle />

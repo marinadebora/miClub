@@ -11,35 +11,35 @@ const Home = () => {
     <div>
       <Stack gap={2} className="col-md-5 mx-auto ">
               <NavLink href="/sport">
+            <div className="p-2">Deporte</div>
             <div className="p-2">
             <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
             </div>
             </NavLink>
-            <div className="p-2">Deporte</div>
         </Stack> 
         <Stack gap={2} className="col-md-5 mx-auto">
         <NavLink href="/education">
+            <div className="p-2">Educacion</div>
             <div className="p-2">
             <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
             </div>
         </NavLink>
-            <div className="p-2">Educacion</div>
         </Stack> 
         <Stack gap={2} className="col-md-5 mx-auto">
         <NavLink href="/jobs">
+            <div className="p-2">Oficio</div>
             <div className="p-2">
             <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
             </div>
             </NavLink>
-            <div className="p-2">Oficio</div>
         </Stack> 
         <Stack gap={2} className="col-md-5 mx-auto">
         <NavLink href="/others">
+            <div className="p-2">Otros</div>
             <div className="p-2">
             <Image src="https://res.cloudinary.com/deqbqghhq/image/upload/v1687559114/banner_proyectoMongo_jl0ldc.jpg"fluid  />
             </div>
             </NavLink>
-            <div className="p-2">Otros</div>
         </Stack> 
        </div>
   
